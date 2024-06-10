@@ -2,7 +2,9 @@ import classNames from 'classnames/bind'
 import { useEffect, useState } from 'react'
 
 import styles from './App.module.scss'
-import FullScreenMessage from '@components/shared/FullScreenMessage'
+import FullScreenMessage from '@shared/FullScreenMessage'
+import Heading from '@components/sections/Heading'
+import Video from '@components/sections/Video'
 
 const cx = classNames.bind(styles)
 
@@ -22,18 +24,22 @@ function App() {
       })
       .then((data) => {
         setWeddingData(data)
-        setIsLoading(false)
+        setTimeout(() => {
+          setIsLoading(false)
+        }, 1000)
       })
       .catch((e) => {
         console.log('에러 발생', e)
         setIsError(true)
       })
       .finally(() => {
-        setIsLoading(false)
+        setTimeout(() => {
+          setIsLoading(false)
+        }, 1000)
       })
   }, [])
 
-  if (isLoading === false) {
+  if (isLoading) {
     return <FullScreenMessage type="loading" />
   }
 
@@ -41,7 +47,13 @@ function App() {
     return <FullScreenMessage type="error" />
   }
 
-  return <div className={cx('container')}>{JSON.stringify(weddingData)}</div>
+  return (
+    <div className={cx('container')}>
+      <Heading />
+      <Video />
+      {JSON.stringify(weddingData)}
+    </div>
+  )
 }
 
 export default App
