@@ -10,6 +10,9 @@
           ],
           "@shared/*":[
              "src/components/shared/*"
+          ],
+          "@models/*":[
+            "src/models/*"
           ]
        }
     }

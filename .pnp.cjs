@@ -40,6 +40,7 @@ const RAW_RUNTIME_STATE =
           ["@types/testing-library__jest-dom", "npm:6.0.0"],\
           ["classnames", "npm:2.5.1"],\
           ["craco-alias", "npm:3.0.1"],\
+          ["date-fns", "npm:3.6.0"],\
           ["eslint", "npm:8.57.0"],\
           ["eslint-config-prettier", "virtual:358da491af74ab32644a51557c9759524831c741adfbd13b063928e3734faf39d582cd295173284ab81b9f71a36994c76a98077c52b9ac481dae8844e4f7f4d2#npm:9.1.0"],\
           ["eslint-config-react-app", "virtual:358da491af74ab32644a51557c9759524831c741adfbd13b063928e3734faf39d582cd295173284ab81b9f71a36994c76a98077c52b9ac481dae8844e4f7f4d2#npm:7.0.1"],\
@@ -8191,6 +8192,15 @@ const RAW_RUNTIME_STATE =
           ["call-bind", "npm:1.0.7"],\
           ["es-errors", "npm:1.3.0"],\
           ["is-data-view", "npm:1.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["date-fns", [\
+      ["npm:3.6.0", {\
+        "packageLocation": "../../../.yarn/berry/cache/date-fns-npm-3.6.0-e59d980978-10c0.zip/node_modules/date-fns/",\
+        "packageDependencies": [\
+          ["date-fns", "npm:3.6.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -18771,6 +18781,7 @@ const RAW_RUNTIME_STATE =
           ["@types/testing-library__jest-dom", "npm:6.0.0"],\
           ["classnames", "npm:2.5.1"],\
           ["craco-alias", "npm:3.0.1"],\
+          ["date-fns", "npm:3.6.0"],\
           ["eslint", "npm:8.57.0"],\
           ["eslint-config-prettier", "virtual:358da491af74ab32644a51557c9759524831c741adfbd13b063928e3734faf39d582cd295173284ab81b9f71a36994c76a98077c52b9ac481dae8844e4f7f4d2#npm:9.1.0"],\
           ["eslint-config-react-app", "virtual:358da491af74ab32644a51557c9759524831c741adfbd13b063928e3734faf39d582cd295173284ab81b9f71a36994c76a98077c52b9ac481dae8844e4f7f4d2#npm:7.0.1"],\

@@ -6,10 +6,12 @@ import FullScreenMessage from '@shared/FullScreenMessage'
 import Heading from '@components/sections/Heading'
 import Video from '@components/sections/Video'
 
+import { Wedding } from '@models/wedding'
+
 const cx = classNames.bind(styles)
 
 function App() {
-  const [weddingData, setWeddingData] = useState(null)
+  const [weddingData, setWeddingData] = useState<Wedding | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [isError, setIsError] = useState(false)
   // 1. wedding 데이터 호출
@@ -47,9 +49,15 @@ function App() {
     return <FullScreenMessage type="error" />
   }
 
+  if (weddingData == null) {
+    return null
+  }
+
+  const { date } = weddingData
+
   return (
     <div className={cx('container')}>
-      <Heading />
+      <Heading date={date} />
       <Video />
       {JSON.stringify(weddingData)}
     </div>
