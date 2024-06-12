@@ -8,6 +8,8 @@ import Video from '@components/sections/Video'
 
 import { Wedding } from '@models/wedding'
 import ImageGallery from './components/sections/ImageGallery'
+import Intro from './components/sections/Intro'
+import Invitation from './components/sections/Invitation'
 
 const cx = classNames.bind(styles)
 
@@ -54,12 +56,27 @@ function App() {
     return null
   }
 
-  const { date, galleryImages } = weddingData
+  const {
+    date,
+    galleryImages,
+    groom,
+    bride,
+    location,
+    message: { intro, invitation },
+  } = weddingData
 
   return (
     <div className={cx('container')}>
       <Heading date={date} />
       <Video />
+      <Intro
+        date={date}
+        groomName={groom.name}
+        brideName={bride.name}
+        locationName={location.name}
+        message={intro}
+      />
+      <Invitation message={invitation} />
       <ImageGallery images={galleryImages} />
       {JSON.stringify(weddingData)}
     </div>
