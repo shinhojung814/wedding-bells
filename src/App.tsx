@@ -1,5 +1,5 @@
-import classNames from 'classnames/bind'
 import { useEffect, useState } from 'react'
+import classNames from 'classnames/bind'
 
 import styles from './App.module.scss'
 import FullScreenMessage from '@shared/FullScreenMessage'
@@ -7,10 +7,11 @@ import Heading from '@components/sections/Heading'
 import Video from '@components/sections/Video'
 
 import { Wedding } from '@models/wedding'
-import ImageGallery from './components/sections/ImageGallery'
-import Intro from './components/sections/Intro'
-import Invitation from './components/sections/Invitation'
-import Calendar from './components/sections/Calendar'
+import ImageGallery from '@components/sections/ImageGallery'
+import Intro from '@components/sections/Intro'
+import Invitation from '@components/sections/Invitation'
+import Calendar from '@components/sections/Calendar'
+import Map from '@components/sections/Map'
 
 const cx = classNames.bind(styles)
 
@@ -18,7 +19,7 @@ function App() {
   const [weddingData, setWeddingData] = useState<Wedding | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [isError, setIsError] = useState(false)
-  // 1. wedding 데이터 호출
+
   useEffect(() => {
     setIsLoading(true)
     fetch('http://localhost:8888/wedding')
@@ -80,7 +81,8 @@ function App() {
       <Invitation message={invitation} />
       <ImageGallery images={galleryImages} />
       <Calendar date={date} />
-      {JSON.stringify(weddingData)}
+      <Map location={location} />
+      {/* {JSON.stringify(weddingData)} */}
     </div>
   )
 }
