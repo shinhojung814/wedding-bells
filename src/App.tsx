@@ -83,7 +83,7 @@ function App() {
       <ImageGallery images={galleryImages} />
       <Calendar date={date} />
       <Map location={location} />
-      <Contact />
+      <Contact groom={groom} bride={bride} />
       {/* {JSON.stringify(weddingData)} */}
     </div>
   )

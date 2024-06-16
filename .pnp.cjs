@@ -36,6 +36,7 @@ const RAW_RUNTIME_STATE =
           ["@types/jest", "npm:29.5.12"],\
           ["@types/node", "npm:16.18.98"],\
           ["@types/react", "npm:18.3.3"],\
+          ["@types/react-copy-to-clipboard", "npm:5.0.7"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@types/testing-library__jest-dom", "npm:6.0.0"],\
           ["classnames", "npm:2.5.1"],\
@@ -49,6 +50,7 @@ const RAW_RUNTIME_STATE =
           ["json-server", "npm:1.0.0-beta.1"],\
           ["prettier", "npm:3.3.1"],\
           ["react", "npm:18.3.1"],\
+          ["react-copy-to-clipboard", "virtual:358da491af74ab32644a51557c9759524831c741adfbd13b063928e3734faf39d582cd295173284ab81b9f71a36994c76a98077c52b9ac481dae8844e4f7f4d2#npm:5.1.0"],\
           ["react-day-picker", "virtual:358da491af74ab32644a51557c9759524831c741adfbd13b063928e3734faf39d582cd295173284ab81b9f71a36994c76a98077c52b9ac481dae8844e4f7f4d2#npm:8.10.1"],\
           ["react-dom", "virtual:358da491af74ab32644a51557c9759524831c741adfbd13b063928e3734faf39d582cd295173284ab81b9f71a36994c76a98077c52b9ac481dae8844e4f7f4d2#npm:18.3.1"],\
           ["react-scripts", "virtual:358da491af74ab32644a51557c9759524831c741adfbd13b063928e3734faf39d582cd295173284ab81b9f71a36994c76a98077c52b9ac481dae8844e4f7f4d2#npm:5.0.1"],\
@@ -5315,6 +5317,16 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@types/react-copy-to-clipboard", [\
+      ["npm:5.0.7", {\
+        "packageLocation": "../../../.yarn/berry/cache/@types-react-copy-to-clipboard-npm-5.0.7-cf9459d351-10c0.zip/node_modules/@types/react-copy-to-clipboard/",\
+        "packageDependencies": [\
+          ["@types/react-copy-to-clipboard", "npm:5.0.7"],\
+          ["@types/react", "npm:18.3.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@types/react-dom", [\
       ["npm:18.3.0", {\
         "packageLocation": "../../../.yarn/berry/cache/@types-react-dom-npm-18.3.0-111444d3eb-10c0.zip/node_modules/@types/react-dom/",\
@@ -7598,6 +7610,16 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../.yarn/berry/cache/cookie-signature-npm-1.0.6-93f325f7f0-10c0.zip/node_modules/cookie-signature/",\
         "packageDependencies": [\
           ["cookie-signature", "npm:1.0.6"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["copy-to-clipboard", [\
+      ["npm:3.3.3", {\
+        "packageLocation": "../../../.yarn/berry/cache/copy-to-clipboard-npm-3.3.3-6964e6cfad-10c0.zip/node_modules/copy-to-clipboard/",\
+        "packageDependencies": [\
+          ["copy-to-clipboard", "npm:3.3.3"],\
+          ["toggle-selection", "npm:1.0.6"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15958,6 +15980,30 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["react-copy-to-clipboard", [\
+      ["npm:5.1.0", {\
+        "packageLocation": "../../../.yarn/berry/cache/react-copy-to-clipboard-npm-5.1.0-de9742f2bc-10c0.zip/node_modules/react-copy-to-clipboard/",\
+        "packageDependencies": [\
+          ["react-copy-to-clipboard", "npm:5.1.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:358da491af74ab32644a51557c9759524831c741adfbd13b063928e3734faf39d582cd295173284ab81b9f71a36994c76a98077c52b9ac481dae8844e4f7f4d2#npm:5.1.0", {\
+        "packageLocation": "./.yarn/__virtual__/react-copy-to-clipboard-virtual-bf13d47b4b/4/.yarn/berry/cache/react-copy-to-clipboard-npm-5.1.0-de9742f2bc-10c0.zip/node_modules/react-copy-to-clipboard/",\
+        "packageDependencies": [\
+          ["react-copy-to-clipboard", "virtual:358da491af74ab32644a51557c9759524831c741adfbd13b063928e3734faf39d582cd295173284ab81b9f71a36994c76a98077c52b9ac481dae8844e4f7f4d2#npm:5.1.0"],\
+          ["@types/react", "npm:18.3.3"],\
+          ["copy-to-clipboard", "npm:3.3.3"],\
+          ["prop-types", "npm:15.8.1"],\
+          ["react", "npm:18.3.1"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["react-day-picker", [\
       ["npm:8.10.1", {\
         "packageLocation": "../../../.yarn/berry/cache/react-day-picker-npm-8.10.1-708bfe7c0e-10c0.zip/node_modules/react-day-picker/",\
@@ -17920,6 +17966,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["toggle-selection", [\
+      ["npm:1.0.6", {\
+        "packageLocation": "../../../.yarn/berry/cache/toggle-selection-npm-1.0.6-c506b73005-10c0.zip/node_modules/toggle-selection/",\
+        "packageDependencies": [\
+          ["toggle-selection", "npm:1.0.6"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["toidentifier", [\
       ["npm:1.0.1", {\
         "packageLocation": "../../../.yarn/berry/cache/toidentifier-npm-1.0.1-f759712599-10c0.zip/node_modules/toidentifier/",\
@@ -18824,6 +18879,7 @@ const RAW_RUNTIME_STATE =
           ["@types/jest", "npm:29.5.12"],\
           ["@types/node", "npm:16.18.98"],\
           ["@types/react", "npm:18.3.3"],\
+          ["@types/react-copy-to-clipboard", "npm:5.0.7"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@types/testing-library__jest-dom", "npm:6.0.0"],\
           ["classnames", "npm:2.5.1"],\
@@ -18837,6 +18893,7 @@ const RAW_RUNTIME_STATE =
           ["json-server", "npm:1.0.0-beta.1"],\
           ["prettier", "npm:3.3.1"],\
           ["react", "npm:18.3.1"],\
+          ["react-copy-to-clipboard", "virtual:358da491af74ab32644a51557c9759524831c741adfbd13b063928e3734faf39d582cd295173284ab81b9f71a36994c76a98077c52b9ac481dae8844e4f7f4d2#npm:5.1.0"],\
           ["react-day-picker", "virtual:358da491af74ab32644a51557c9759524831c741adfbd13b063928e3734faf39d582cd295173284ab81b9f71a36994c76a98077c52b9ac481dae8844e4f7f4d2#npm:8.10.1"],\
           ["react-dom", "virtual:358da491af74ab32644a51557c9759524831c741adfbd13b063928e3734faf39d582cd295173284ab81b9f71a36994c76a98077c52b9ac481dae8844e4f7f4d2#npm:18.3.1"],\
           ["react-scripts", "virtual:358da491af74ab32644a51557c9759524831c741adfbd13b063928e3734faf39d582cd295173284ab81b9f71a36994c76a98077c52b9ac481dae8844e4f7f4d2#npm:5.0.1"],\
