@@ -9,11 +9,15 @@ interface AccordionProps {
 const cx = classNames.bind(styles)
 
 function Accordion({ label, children }: PropsWithChildren<AccordionProps>) {
-  const [isOpen, setIsOpen] = useState(true)
+  const [expanded, setExpanded] = useState(false)
+
+  const handleToggle = () => {
+    setExpanded((prev) => !prev)
+  }
 
   return (
-    <div className={cx(['wrap-accordion', isOpen ? 'open' : ''])}>
-      <div className={cx('wrap-header')}>
+    <div className={cx(['wrap-accordion', expanded ? 'open' : ''])}>
+      <div className={cx('wrap-header')} onClick={handleToggle}>
         <span>{label}</span>
         <IconArrowDown className={cx('ico-arrow-down')} />
       </div>

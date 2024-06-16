@@ -18,11 +18,11 @@ const cx = classNames.bind(styles)
 
 function App() {
   const [weddingData, setWeddingData] = useState<Wedding | null>(null)
-  const [isLoading, setIsLoading] = useState(false)
-  const [isError, setIsError] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(false)
 
   useEffect(() => {
-    setIsLoading(true)
+    setLoading(true)
     fetch('http://localhost:8888/wedding')
       .then((response) => {
         if (response.ok === false) {
@@ -33,25 +33,25 @@ function App() {
       .then((data) => {
         setWeddingData(data)
         setTimeout(() => {
-          setIsLoading(false)
+          setLoading(false)
         }, 1000)
       })
       .catch((e) => {
         console.log('에러 발생', e)
-        setIsError(true)
+        setError(true)
       })
       .finally(() => {
         setTimeout(() => {
-          setIsLoading(false)
+          setLoading(false)
         }, 1000)
       })
   }, [])
 
-  if (isLoading) {
+  if (loading) {
     return <FullScreenMessage type="loading" />
   }
 
-  if (isError) {
+  if (error) {
     return <FullScreenMessage type="error" />
   }
 
