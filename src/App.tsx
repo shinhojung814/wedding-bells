@@ -14,11 +14,12 @@ import Calendar from '@components/sections/Calendar'
 import Map from '@components/sections/Map'
 import Contact from './components/sections/Contact'
 import Share from './components/sections/Share'
+import AttendCountModal from './components/AttendCountModal'
 
 const cx = classNames.bind(styles)
 
 function App() {
-  const [weddingData, setWeddingData] = useState<Wedding | null>(null)
+  const [wedding, setWedding] = useState<Wedding | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
 
@@ -32,7 +33,7 @@ function App() {
         return response.json()
       })
       .then((data) => {
-        setWeddingData(data)
+        setWedding(data)
         setTimeout(() => {
           setLoading(false)
         }, 1000)
@@ -56,7 +57,7 @@ function App() {
     return <FullScreenMessage type="error" />
   }
 
-  if (weddingData == null) {
+  if (wedding == null) {
     return null
   }
 
@@ -67,7 +68,7 @@ function App() {
     bride,
     location,
     message: { intro, invitation },
-  } = weddingData
+  } = wedding
 
   return (
     <div className={cx('container')}>
@@ -86,6 +87,7 @@ function App() {
       <Map location={location} />
       <Contact groom={groom} bride={bride} />
       <Share groomName={groom.name} brideName={bride.name} date={date} />
+      <AttendCountModal wedding={wedding} />
     </div>
   )
 }

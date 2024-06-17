@@ -9,7 +9,7 @@ const cx = classNames.bind(styles)
 
 function ImageGallery({ images }: { images: string[] }) {
   const [selectedIdx, setSelectedIdx] = useState(-1)
-  const isOpen = selectedIdx !== -1
+  const open = selectedIdx !== -1
 
   const handleSelectedImage = (idx: number) => {
     setSelectedIdx(idx)
@@ -36,7 +36,7 @@ function ImageGallery({ images }: { images: string[] }) {
       </Section>
       <ImageViewer
         images={images}
-        isOpen={isOpen}
+        open={open}
         selectedIdx={selectedIdx}
         onClose={handleClose}
       />
