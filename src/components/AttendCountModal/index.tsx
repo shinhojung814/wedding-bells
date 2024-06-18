@@ -51,7 +51,7 @@ function AttendCountModal({ wedding }: { wedding: Wedding }) {
         close()
       },
     })
-  }, []) // eslint-disable-line
+  }, [open, close, wedding, haveSeenModal])
 
   return null
 }
